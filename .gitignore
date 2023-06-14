@@ -1,0 +1,28 @@
+# Compiled object files
+*.o
+*.obj
+
+# Compiled dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Executable files
+*.exe
+*.out
+
+# Generated build files
+build/
+bin/
+
+# IDE specific files and directories
+.vscode/
+.idea/
+*.suo
+*.user
+*.sdf
+*.opensdf
+
+# Dependency directories
+lib/
+vendor/
