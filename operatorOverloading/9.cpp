@@ -21,18 +21,16 @@ public:
 
         cout << name << " " << len << " " << roll << endl;
     }
-    void operator++(int)
-    {
-        for (int i = 0; i < len; i++)
-        {
-            this->name[i]++;
-        }
-    }
+    char &operator[](int x) { return name[x]; }
+
     ~Student() { delete[] name; }
 };
 int main()
 {
-    Student s1("CPP", 3, 202114000);
-    s1++;
+    Student s1("cpp", 3, 202114000);
+    if (s1[0] >= 'a' && s1[0] <= 'z')
+    {
+        s1[0] = s1[0] - 32;
+    }
     s1.print();
 }

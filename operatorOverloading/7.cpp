@@ -21,7 +21,7 @@ public:
 
         cout << name << " " << len << " " << roll << endl;
     }
-    void operator++(int)
+    void operator++()
     {
         for (int i = 0; i < len; i++)
         {
@@ -33,6 +33,6 @@ public:
 int main()
 {
     Student s1("CPP", 3, 202114000);
-    s1++;
+    ++s1;
     s1.print();
 }

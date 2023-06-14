@@ -21,18 +21,23 @@ public:
 
         cout << name << " " << len << " " << roll << endl;
     }
-    void operator++(int)
+    Student operator++(int)
     {
+        Student temp(name, len, roll);
         for (int i = 0; i < len; i++)
         {
+            temp.name[i] = this->name[i];
             this->name[i]++;
         }
+        return temp;
     }
+
     ~Student() { delete[] name; }
 };
 int main()
 {
     Student s1("CPP", 3, 202114000);
-    s1++;
+    Student s3 = s1++;
     s1.print();
+    s3.print();
 }
