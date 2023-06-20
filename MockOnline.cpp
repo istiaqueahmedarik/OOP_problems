@@ -19,7 +19,7 @@ public:
         this->a3 = a3;
     }
     virtual int fa() = 0;
-    void display()
+    virtual void display()
     {
         cout << a1 << " " << a2 << " " << a3 << endl;
     }
